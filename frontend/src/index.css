@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #8b5cf6; /* Violet/Purple soft */
+  --color-primary-light: #a78bfa;
+  --color-primary-dark: #7c3aed;
+  --color-secondary: #f472b6; /* Pink pastel */
+  --color-background: #fdfbfb; /* Very soft warm white */
+  --color-surface: #ffffff;
+  --color-surface-hover: #f9fafb;
+  --color-text: #1f2937;
+  --color-text-light: #4b5563;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Outfit', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  }
+  .soft-gradient {
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  }
+}

@@ -1,3 +1,19 @@
+# ========================================
+# General
+# ========================================
+.env
+.env.local
+.env.*.local
+.DS_Store
+
+# ========================================
+# Frontend (React + Vite)
+# ========================================
+frontend/dist/
+frontend/dist-ssr/
+frontend/node_modules/
+frontend/*.local
+
 # Logs
 logs
 *.log
@@ -7,18 +23,84 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# ========================================
+# Backend (Python + Flask)
+# ========================================
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/.Python
+backend/build/
+backend/develop-eggs/
+backend/dist/
+backend/downloads/
+backend/eggs/
+backend/.eggs/
+backend/lib/
+backend/lib64/
+backend/parts/
+backend/sdist/
+backend/var/
+backend/wheels/
+backend/pip-wheel-metadata/
+backend/share/python-wheels/
+backend/*.egg-info/
+backend/.installed.cfg
+backend/*.egg
+backend/MANIFEST
+backend/*.pot
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/.tox/
+backend/.nox/
+backend/.hypothesis/
+backend/instance/
+backend/.webassets-cache
+backend/.scrapy
+backend/docs/_build/
+backend/target/
+backend/.ipynb_checkpoints
+backend/.pytype/
+backend/.mypy_cache/
+backend/.dmypy.json
+backend/dmypy.json
+backend/.pyre/
+backend/.env
+backend/.env.local
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
 
-# Editor directories and files
+# ========================================
+# IDE & Editor
+# ========================================
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# ========================================
+# OS
+# ========================================
+Thumbs.db
+.DS_Store
+
+# ========================================
+# Git
+# ========================================
+.git/
+.gitignore
+node_modules
