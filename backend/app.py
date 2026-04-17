@@ -12,9 +12,9 @@ CORS(app, supports_credentials=True)
 
 # Check for Firebase configuration and log status
 if not Config.FIREBASE_PRIVATE_KEY.strip() or not Config.FIREBASE_CLIENT_EMAIL.strip():
-    print("⚠️  AUTH: Firebase keys missing. Backend is running in [DEVELOPMENT BYPASS] mode.")
+    print("AUTH: Firebase keys missing. Backend is running in [DEVELOPMENT BYPASS] mode.")
 else:
-    print("✅ AUTH: Firebase keys found. Backend is running in [SECURE] mode.")
+    print("AUTH: Firebase keys found. Backend is running in [SECURE] mode.")
 
 # Initialize extensions
 db.init_app(app)
