@@ -19,6 +19,11 @@ else:
 # Initialize extensions
 db.init_app(app)
 
+# Ensure tables are created (especially important for deployment)
+with app.app_context():
+    db.create_all()
+    print("Database tables verified/created.")
+
 # Apply global authentication middleware
 @app.before_request
 def global_auth():
